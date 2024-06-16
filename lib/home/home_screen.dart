@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:task_demo_ui/screen_three/ui/form_screen.dart';
 import 'package:task_demo_ui/screen_two/ui/screen_two_page.dart';
 
-import '../screen_one/ui/widgets/CustomButtonBar.dart';
+import '../screen_one/ui/widgets/custom_bottom_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

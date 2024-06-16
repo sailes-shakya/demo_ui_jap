@@ -19,19 +19,23 @@ class ImageSelectorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: subtitle!.isNotEmpty ? 200 : 150,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: kSectionTitleTextStyle,
-          ),
+          title?.isNotEmpty == true
+              ? Text(
+                  title,
+                  style: kSectionTitleTextStyle,
+                )
+              : SizedBox(height: 0),
           SizedBox(height: 4),
-          Text(
-            subtitle,
-            style: kSubtitleTextStyle,
-          ),
+          subtitle?.isNotEmpty == true
+              ? Text(
+                  subtitle,
+                  style: kSubtitleTextStyle,
+                )
+              : SizedBox(),
           SizedBox(height: 10),
           Expanded(
             child: Obx(() {

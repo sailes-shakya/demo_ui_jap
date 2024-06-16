@@ -23,30 +23,28 @@ class _CustomButtonBarState extends State<CustomButtonBar> {
     return Scaffold(
       extendBody: true,
       body: ScreenOnepage(),
-      floatingActionButton: Stack(
+      floatingActionButton: Container(
+        margin: const EdgeInsets.only(top: 55, right: 30),
+        height: 80,
+        width: 64,
         alignment: Alignment.center,
-        children: [
-          FloatingActionButton(
-            onPressed: () {},
-            shape: CircleBorder(),
-            backgroundColor: Colors.orange,
-            child: Image(image: Svg(MyAssets.svg.barcodeScan.path), width: 40),
-          ),
-          Positioned(
-              child: Text('スキャン',
-                  style: TextStyle(fontSize: 12),
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1),
-              bottom: -21,
-              left: 0,
-              right: 0),
-        ],
+        child: Column(
+          children: [
+            FloatingActionButton(
+              onPressed: () {},
+              shape: CircleBorder(),
+              backgroundColor: Colors.orange,
+              child:
+                  Image(image: Svg(MyAssets.svg.barcodeScan.path), width: 40),
+            ),
+            Text("打刻する")
+          ],
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
-        notchMargin: 8.0,
+        notchMargin: -35.0,
         child: Container(
           height: 60,
           child: Row(
