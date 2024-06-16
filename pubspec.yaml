@@ -1,0 +1,68 @@
+name: task_demo_ui
+description: A Very Good Project created by Very Good CLI.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: "^3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.4
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
+  bloc: ^8.1.3
+  persistent_bottom_nav_bar_v2: ^5.2.3
+  flutter_svg_provider: ^1.0.7
+  easy_date_timeline: 0.0.7
+  google_fonts: ^6.2.1
+  get: ^4.6.6
+  image_picker: ^1.1.2
+  google_maps_flutter: ^2.1.1
+
+
+dev_dependencies:
+  bloc_test: ^9.1.6
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.3
+  very_good_analysis: ^5.1.0
+  build_runner:
+  flutter_gen_runner:
+flutter_gen:
+  output: lib/generated/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+    rive: true
+    lottie: true
+
+  assets:
+    enabled: true
+
+    outputs:
+      class_name: MyAssets
+      package_parameter_enabled: false
+      # Assets.imagesChip
+      # style: camel-case
+
+      # Assets.images_chip
+      # style: snake-case
+
+      # Assets.images.chip (default style)
+      style: dot-delimiter
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/svg/
+
+flutter_intl:
+  enabled: true
